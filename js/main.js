@@ -24,6 +24,7 @@
 			$('#about').hide();
 			$('#team').hide();
 			$('#blog').hide();
+			$('#gallery').hide();
 		}
 		function startup() {
 			resetPage();
@@ -37,6 +38,11 @@
 			$('#about').show();
 		});
 		$('#about-button').on('click', function () {
+			resetPage();
+			$('#about').show();
+			$('#team').show();
+		});
+		$('.about-button').on('click', function () {
 			resetPage();
 			$('#about').show();
 			$('#team').show();
