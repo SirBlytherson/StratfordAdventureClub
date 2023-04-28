@@ -25,11 +25,33 @@
 			$('#team').hide();
 			$('#blog').hide();
 			$('#gallery').hide();
+			$('#calendar').hide();
 		}
 		function startup() {
-			resetPage();
-			$('#home').show();
-			$('#about').show();
+			//resetPage();
+			//$('#home').show();
+			//$('#about').show();
+		
+			var path = window.location.href
+			
+			if(path.includes("calendar")){
+				resetPage();
+				$('#calendar').show();
+			} else if (path.includes("gallery")) {
+				resetPage();
+				$('#gallery').show();
+			} else if (path.includes("blog")) {
+				resetPage();
+				$('#blog').show();
+			} else if (path.includes("about")) {
+				resetPage();
+				$('#about').show();
+				$('#team').show();
+			} else if (path.includes("home")) {
+				resetPage();
+				$('#home').show();
+				$('#about').show();
+			}
 		}
 		startup();
 		$('#home-button').on('click', function () {
@@ -42,11 +64,6 @@
 			$('#about').show();
 			$('#team').show();
 		});
-		$('.about-button').on('click', function () {
-			resetPage();
-			$('#about').show();
-			$('#team').show();
-		});
 		$('#blog-button').on('click', function () {
 			resetPage();
 			$('#blog').show();
@@ -55,6 +72,11 @@
 			resetPage();
 			$('#gallery').show();
 		});
+		$('#calendar-button').on('click', function () {
+			resetPage();
+			$('#calendar').show();
+		});
+		
 		/*
 			var pages = [ "#home", "#about", "#blog" ]
 			for(let page in pages) {
