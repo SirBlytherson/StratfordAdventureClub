@@ -9768,3 +9768,10 @@ h6,
   padding: 0;
   list-style-type: none;
 }
+
+#registration table {
+	color: #111
+}
+#registration td {
+	padding: 10px;
+}

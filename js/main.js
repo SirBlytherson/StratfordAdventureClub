@@ -26,6 +26,7 @@
 			$('#blog').hide();
 			$('#gallery').hide();
 			$('#calendar').hide();
+			$('#registration').hide();
 		}
 		function startup() {
 			//resetPage();
@@ -37,6 +38,9 @@
 			if(path.includes("calendar")){
 				resetPage();
 				$('#calendar').show();
+			} else if(path.includes("registration")){
+				resetPage();
+				$('#registration').show();
 			} else if (path.includes("gallery")) {
 				resetPage();
 				$('#gallery').show();
@@ -76,18 +80,10 @@
 			resetPage();
 			$('#calendar').show();
 		});
-		
-		/*
-			var pages = [ "#home", "#about", "#blog" ]
-			for(let page in pages) {
-				$(page + "-button").click(function(){
-					$(page).show()
-					for(let p in pages) {
-						if(p != page) $(p).hide()
-					}
-				});
-			}
-			*/
+		$('#registration-button').on('click', function () {
+			resetPage();
+			$('#registration').show();
+		});
 	});
     
     
