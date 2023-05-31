@@ -55,6 +55,10 @@
 				resetPage();
 				$('#home').show();
 				$('#about').show();
+			} else {
+				resetPage();
+				$('#home').show();
+				$('#about').show();
 			}
 		}
 		startup();
